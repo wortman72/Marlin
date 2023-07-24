@@ -136,9 +136,9 @@
 //
 #define HEATER_0_PIN                        PC8   // "HE"
 #define HEATER_BED_PIN                      PC9   // "HB"
-#define FAN0_PIN                            PC6   // "FAN0"
-#define FAN1_PIN                            PC7   // "FAN1"
-#define FAN2_PIN                            PB15  // "FAN2"
+#define FAN0_PIN                            PC6   // "FAN0" //part cooling fan MW
+#define FAN1_PIN                            PC7   // "FAN1" //hotend fan MW
+#define FAN2_PIN                            PB15  // "FAN2" //controller fan MW
 
 /**
  *              SKR Mini E3 V3.0
@@ -175,7 +175,7 @@
    *
    * All pins are labeled as printed on DWIN PCB. Connect TX-TX, A-A and so on.
    */
-
+  #define NO_CONTROLLER_CUSTOM_WIRING_WARNING
   #ifndef NO_CONTROLLER_CUSTOM_WIRING_WARNING
     #error "CAUTION! DWIN_CREALITY_LCD requires a custom cable, see diagram above this line. (Define NO_CONTROLLER_CUSTOM_WIRING_WARNING to suppress this warning.)"
   #endif
