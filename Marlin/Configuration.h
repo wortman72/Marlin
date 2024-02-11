@@ -1340,7 +1340,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //MW BED PROBE ENABLE
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING //TRY USING PROBE FOR HOMING? 
 
 /**
  * Z_MIN_PROBE_PIN
@@ -2262,11 +2262,11 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 20// WAS X_CENTER  // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 20//WAS Y_CENTER  // (mm) Y point for Z homing
   //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 
