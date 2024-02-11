@@ -70,7 +70,7 @@
 #ifndef MOTHERBOARD
   #define MOTHERBOARD BOARD_BTT_SKR_MINI_E3_V3_0
 #endif
-
+#define DIAG_JUMPERS_REMOVED
 /**
  * Select the serial port on the board to use for communication with the host.
  * This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -1233,7 +1233,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 932 }
-
+#define EDITABLE_STEPS_PER_UNIT //MW added to turn M92 back on?
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
  * Override with M203
@@ -1340,7 +1340,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //MW BED PROBE ENABLE
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING //TRY USING PROBE FOR HOMING? 
+//#define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -2262,11 +2262,11 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-#define Z_SAFE_HOMING
+//#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT 20// WAS X_CENTER  // (mm) X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 20//WAS Y_CENTER  // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 40// WAS X_CENTER  // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 40//WAS Y_CENTER  // (mm) Y point for Z homing
   //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 

@@ -2031,6 +2031,7 @@
 //
 // Additional options for DGUS / DWIN displays
 //
+#define NO_AUTO_ASSIGN_WARNING //MW added to supress auto-assign serial warning
 #if HAS_DGUS_LCD
   #define LCD_BAUDRATE 115200
 
